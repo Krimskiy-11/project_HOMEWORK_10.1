@@ -1,8 +1,9 @@
-from masks import get_mask_card_number, get_mask_account
-from typing import Union
+from typing import Any
+
+from masks import get_mask_account, get_mask_card_number
 
 
-def mask_account_card(card_or_account: str) -> Union[str|None]:
+def mask_account_card(card_or_account: str) -> Any:
     list_card_or_account = card_or_account.split()
     for i in list_card_or_account:
         if i.isdigit():
