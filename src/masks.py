@@ -1,8 +1,7 @@
-def get_mask_card_number(card_num: int) -> str:
+def get_mask_card_number(card_num: str) -> str:
     """Принимает на вход номер карты и возвращает ее маску"""
-    str_card_num = str(card_num)
 
-    mask = str_card_num.replace(str_card_num[6:12], "******")
+    mask = card_num.replace(card_num[6:12], "******")
 
     space_card_num = ""
     for i in mask:
@@ -13,10 +12,7 @@ def get_mask_card_number(card_num: int) -> str:
     return space_card_num
 
 
-def get_mask_account(total_num: int) -> str:
+def get_mask_account(total_num: str) -> str:
     """Принимает на вход номер счета и возвращает его маску"""
-    str_total_num = str(total_num)
 
-    mask = str_total_num.replace(str_total_num[:-4], "**")
-
-    return mask
+    return total_num.replace(total_num[:-4], "**")
